@@ -55,3 +55,20 @@ require("lazy").setup({
     },
   },
 })
+
+require("lspconfig").clangd.setup({
+  cmd = {
+    "clangd",
+    "--compile-commands-dir=.",
+    "--query-driver=*",
+    "--clang-tidy",
+    "--all-scopes-completion",
+    "--completion-style=detailed",
+    "--header-insertion=never",
+    "--limit-results=0",
+    "--background-index",
+    "--log=verbose",
+  },
+  capabilities = capabilities,
+})
+
