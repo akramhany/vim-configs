@@ -3,3 +3,10 @@
 -- Add any additional autocmds here
 
 vim.g.autoformat = false
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "fortran", "f90", "f" },
+  callback = function()
+    vim.cmd("NoMatchParen")
+  end,
+})

@@ -32,6 +32,7 @@ return {
 			local args_str = vim.fn.input("Arguments: ")
 			return vim.split(args_str, " ")
 			end,
+            --runInTerminal = false,
 			cwd = "${workspaceFolder}",
 			stopOnEntry = false,
 			terminal = "integrated",
