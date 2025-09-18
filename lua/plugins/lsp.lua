@@ -1,7 +1,7 @@
 return {
   -- tools
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "luacheck",
@@ -20,6 +20,20 @@ return {
       inlay_hints = { enabled = true },
       ---@type lspconfig.options
       servers = {
+        clangd = {
+          cmd = {
+            "clangd",
+            "--compile-commands-dir=.",
+            "--query-driver=*",
+            "--clang-tidy",
+            "--all-scopes-completion",
+            "--completion-style=detailed",
+            "--header-insertion=never",
+            "--limit-results=0",
+            "--background-index",
+            "--log=verbose",
+          },
+        },
         cssls = {},
         tailwindcss = {
           root_dir = function(...)
