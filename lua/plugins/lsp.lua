@@ -148,4 +148,33 @@ return {
       table.insert(opts.sources, { name = "emoji" })
     end,
   },
+
+-- USE IT IF BLINK.CMP IS NOT WORKING
+-- {
+--   "hrsh7th/nvim-cmp",
+--   enabled = true,
+--   dependencies = {
+--     "hrsh7th/cmp-nvim-lsp", -- connect LSP -> cmp
+--     "hrsh7th/cmp-buffer",   -- buffer words
+--     "hrsh7th/cmp-path",     -- filesystem paths
+--     "hrsh7th/cmp-cmdline",  -- cmdline completion
+--     "L3MON4D3/LuaSnip",     -- snippets
+--     "saadparwaiz1/cmp_luasnip",
+--   },
+--   config = function()
+--     local cmp = require("cmp")
+--     cmp.setup({
+--       mapping = cmp.mapping.preset.insert({
+--         ["<CR>"] = cmp.mapping.confirm({ select = true }),
+--       }),
+--       sources = cmp.config.sources({
+--         { name = "nvim_lsp" },
+--         { name = "luasnip" },
+--       }, {
+--         { name = "buffer" },
+--         { name = "path" },
+--       })
+--     })
+--   end,
+-- }
 }

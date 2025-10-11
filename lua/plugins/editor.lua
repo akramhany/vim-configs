@@ -127,7 +127,4 @@ return {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
   },
-  require("blink.cmp").setup({
-    use_rust = false,
-  }),
 }
